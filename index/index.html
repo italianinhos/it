@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itália</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div style="margin-top: 8% ;" onclick="openModal()" class="btn"> Sua dica aqui! </div>
+
+    <div id="modal-container" class="modal-container">
+        <div class="modal">
+            <button class="fechar" id="fechar">X</button>
+            <h1> Olá visitantes, </h1>
+            <p> Sejam bem-vindos ao site Italianinhos! gostaríamos de informar que o seu login é "Itália". Simples, não é?</p><br>
+            <p> Dicas para a sua senha:</p>
+            <p> 1º É um famoso monumento localizado em Roma, na Itália. </p>
+            <p> 2º Era usado para diversos eventos, incluindo lutas de gladiadores e apresentações teatrais. </p><br>
+            <p> Obs: Primeira letra do "login" e da "senha" São maiusculas. </p>
+            <p> A sua senha é? </p>
+        </div>
+    </div>
+
+    <script src="css/script.js"></script>
+    
+<form class="box" action="../home/home.html" method="post">
+    <h1>Login Usuário </h1>
+
+    <input type="text" name="" placeholder="login" id="login">
+    <input type="password" name="" placeholder="senha" id="senha">
+    <input type="submit" onclick="logar(); return false">
+
+</form>
+
+<script>
+
+function logar() 
+{
+    var login = document.getElementById('login').value
+
+    var senha = document.getElementById('senha').value
+
+if(login == "Itália" && senha == "Coliseu") {
+
+    alert('Sejam bem-vindos a Itália'); 
+
+    location.href = "../home/home.html";
+
+ }else{ 
+    alert(' Senha ou login incorreto (3º dica - Sua senha é Coliseu)  (Não se esqueca da pontuação em "Itália") ');
+
+  }
+
+}
+
+
+</script>
+
+
+</body>
+</html>
