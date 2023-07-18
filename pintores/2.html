@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Michelangelo </title>
+  <link rel="stylesheet" href="css/style2.css">
+
+  
+</head>
+<body>
+
+  
+
+  <header>
+    <a class="logo">Pintores</a>
+
+    <a href="https://www.instagram.com/italianos_senai/"  target="corpo"><img style="margin-left: 820px; margin-top: 4px;" src="fotos/insta.png" width="35" height="35"> </a>
+    <a href="https://www.facebook.com/profile.php?id=100094661707788" target="corpo"><img style="padding: 3px; margin-top: 4px;" src="fotos/face.png" width="35" height="35"> </a> 
+
+    <div class="navigation">
+      <ul class="menu">
+        <div class="close-btn"></div>
+        <li class="menu-item"><a href="../home/home.html">Menu</a></li>
+        <li class="menu-item">
+          <a class="sub-btn" href="../culinaria/1.html"> Culinária  <i class="fas fa-angle-down"></i></a>
+          <ul class="sub-menu">
+            <li class="sub-item"><a href="../culinaria/1.html"> Pizza</a></li>
+            <li class="sub-item"><a href="../culinaria/2.html"> Macarronada</a></li>
+            <li class="sub-item"><a href="../culinaria/3.html"> Lasanha </a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a class="sub-btn" href="../pontos/index.html">Pontos Turísticos</a>
+        
+        </li>
+        <li class="menu-item">
+          <a class="sub-btn" href="1.html"> Pintores <i class="fas fa-angle-down"></i> </a>
+          <ul class="sub-menu">
+            <li class="sub-item"><a href="1.html">Leonardo Da Vinci</a></li>
+            <li class="sub-item"><a href="#">Michelangelo</a></li>
+            <li class="sub-item"><a href="3.html">Donatello</a></li>
+            <li class="sub-item more">
+            </li>
+          </ul>
+        </li>
+        
+        <li class="menu-item"><a href="../carnaval/carnaval.html">Carnaval</a></li>
+      
+
+
+        <li class="menu-item"><a href="../Contato/contato.html">Contato</a></li>
+      </ul>
+    </div>
+    <div class="menu-btn"></div>
+  </header>
+
+  <section class="section-home">
+    <a class="scroll-link" href="#section2">Michelangelo</a>
+  </section>
+  <section class="section-two">
+    <div id="section2" class="content"></div>
+    <script src="java/script.js"></script>
+
+    <h2> Michelangelo </h2>
+
+    <p>Michelangelo Buonarroti, conhecido simplesmente como Michelangelo, foi um dos maiores artistas renascentistas da Itália. Ele nasceu em 1475 na cidade de Caprese, na Toscana, e faleceu em 1564, em Roma.
+        <br><br>
+        Michelangelo era um talentoso escultor, pintor, arquiteto e poeta. Ele foi um dos principais protagonistas do movimento artístico e cultural conhecido como Renascimento, que valorizava a redescoberta das artes e do conhecimento clássico greco-romano.
+<br>
+Seu trabalho mais famoso é a pintura do teto da Capela Sistina, localizada no Vaticano, em Roma. A obra é considerada uma das mais importantes da história da arte ocidental. Michelangelo também esculpiu a estátua de Davi, uma das esculturas mais icônicas já criadas, além de várias outras esculturas de renome. </p>
+
+    <p>Na arquitetura, Michelangelo foi responsável pelo projeto da Basílica de São Pedro, outra importante obra da cidade do Vaticano. Seu estilo caracterizava-se pelo uso de figuras humanas idealizadas, proporções harmoniosas e expressão emocional. <br>
+
+    Michelangelo teve uma vida longa e produtiva, trabalhando para vários papas, nobres e patronos influentes de sua época. Ele deixou um legado artístico duradouro, que continua a inspirar e encantar as pessoas até os dias de hoje. Seu trabalho influenciou gerações de artistas posteriores e sua genialidade é amplamente reconhecida e admirada.</p>
+
+    <p>
+        Michelangelo também foi contratado pelo Papa Júlio II para decorar o teto da Capela Sistina, no Vaticano. Essa obra-prima abrange mais de 5.000 metros quadrados e apresenta afrescos que retratam cenas bíblicas, incluindo a famosa "Criação de Adão", em que Deus estende o dedo para tocar o dedo de Adão, simbolizando a criação da humanidade.<br>
+
+Além de esculturas e pinturas, Michelangelo também se aventurou na arquitetura. Ele trabalhou na Basílica de São Pedro, em Roma, e projetou a famosa escadaria da Biblioteca Laurentiana, em Florença.
+<br>
+
+A vida e a obra de Michelangelo tiveram um impacto duradouro na história da arte. Seu estilo expressivo, seus traços anatômicos precisos e sua habilidade em capturar a emoção humana continuam a inspirar artistas até os dias de hoje. Michelangelo deixou um legado inestimável, com suas obras-primas sendo admiradas em museus e galerias em todo o mundo.
+    </p>
+    
+    <img src="../pintores/fotos/aa.jpg" width="640" height="360" >
+
+  </section>
+
+  <script type="text/javascript">
+  //jquery for toggle dropdown menus
+  $(document).ready(function(){
+    //toggle sub-menus
+    $(".sub-btn").click(function(){
+      $(this).next(".sub-menu").slideToggle();
+    });
+
+    //toggle more-menus
+    $(".more-btn").click(function(){
+      $(this).next(".more-menu").slideToggle();
+    });
+  });
+
+  //javascript for the responsive navigation menu
+  var menu = document.querySelector(".menu");
+  var menuBtn = document.querySelector(".menu-btn");
+  var closeBtn = document.querySelector(".close-btn");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+
+  //javascript for the navigation bar effects on scroll
+  window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+  });
+  </script>
+
+
+  </body>
+</html>

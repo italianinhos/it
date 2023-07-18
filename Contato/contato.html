@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Contato</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <header>
+      <a  class="logo">Itália</a>
+
+      <a href="https://www.instagram.com/italianos_senai/"  target="corpo"><img style="margin-left: 900px; margin-top: 4px;" src="fotos/insta.png" width="35" height="35"> </a>
+      <a href="https://www.facebook.com/profile.php?id=100094661707788" target="corpo"><img style="padding: 3px; margin-top: 4px;" src="fotos/face.png" width="35" height="35"> </a> 
+
+
+      <div class="navigation">
+        <ul class="menu">
+          <div class="close-btn"></div>
+          <li class="menu-item"><a href="../home/home.html">Menu</a></li>
+          <li class="menu-item">
+            <a  class="sub-btn" href="../culinaria/1.html">Culinária </a>
+            
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="../culinaria/1.html"> Pizza</a></li>
+              <li class="sub-item"><a href="../culinaria/2.html"> Macarronada</a></li>
+              <li class="sub-item"><a href="../culinaria/3.html"> Lasanha</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a class="sub-btn" href="../pontos/index.html"> Pontos Turísticos </i></a>
+            
+          </li>
+        
+            <li class="menu-item">
+            <a class="sub-btn" href="../pintores/1.html">Pintores </a>
+            <ul class="sub-menu">
+              <li class="sub-item"><a href="../pintores/1.html">Leonardo Da Vinci</a></li>
+              <li class="sub-item"><a href="../pintores/2.html"> Michelangelo </a></li>
+              <li class="sub-item"><a href="../pintores/3.html">Donatello</a></li>
+              <li class="sub-item more">
+              </li>
+            </ul>
+          </li>
+          
+          <li class="menu-item"><a href="../carnaval/carnaval.html">Carnaval</a></li>
+
+          <li class="menu-item"><a href="#">Contato</a></li>
+         
+        </ul>
+      </div>
+      <div class="menu-btn"></div>
+    
+    
+    </header>
+
+    
+    
+
+    <form action="https://formsubmit.co/italianosenai@gmail.com"  method="POST"   class="form">
+      <h1> Deixe sua opinião  </h1>
+      
+       <label for="name"> Qual o seu lugar preferido da Itália ?</label>
+       <input type="text" name="name" id="name"  placeholder="Conte aqui!" required />
+       <label for="message">Deixe Sua Opinião sobre o Site</label>
+       <textarea name="message" id="message"   placeholder="Opinião aqui!"   required></textarea>
+       <input type="hidden" name="_captcha"  value="false" />
+       <input type="hidden" name="_next"    value="http://127.0.0.1:5500/Contato/contato.html" />
+       <button type="submit">Enviar</button>
+     </form>
+    
+     
+
+     
+ 
+  </body>
+</html>

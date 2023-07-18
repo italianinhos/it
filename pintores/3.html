@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donatello </title>
+  <link rel="stylesheet" href="css/style3.css">
+
+  
+</head>
+<body>
+
+  
+
+  <header>
+    <a class="logo">Pintores</a>
+
+    <a href="https://www.instagram.com/italianos_senai/"  target="corpo"><img style="margin-left: 820px; margin-top: 4px;" src="fotos/insta.png" width="35" height="35"> </a>
+    <a href="https://www.facebook.com/profile.php?id=100094661707788" target="corpo"><img style="padding: 3px; margin-top: 4px;" src="fotos/face.png" width="35" height="35"> </a> 
+
+    <div class="navigation">
+      <ul class="menu">
+        <div class="close-btn"></div>
+        <li class="menu-item"><a href="../home/home.html">Menu</a></li>
+        <li class="menu-item">
+          <a class="sub-btn" href="../culinaria/1.html"> Culinária  <i class="fas fa-angle-down"></i></a>
+          <ul class="sub-menu">
+            <li class="sub-item"><a href="../culinaria/1.html"> Pizza</a></li>
+            <li class="sub-item"><a href="../culinaria/2.html"> Macarronada</a></li>
+            <li class="sub-item"><a href="../culinaria/3.html"> Lasanha </a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a class="sub-btn" href="../pontos/index.html">Pontos Turísticos</a>
+        
+        </li>
+        <li class="menu-item">
+          <a class="sub-btn" href="#"> Pintores <i class="fas fa-angle-down"></i> </a>
+          <ul class="sub-menu">
+            <li class="sub-item"><a href="1.html"> Leonardo Da Vinci</a></li>
+            <li class="sub-item"><a href="2.html">Michelangelo</a></li>
+            <li class="sub-item"><a href="#">Donatello</a></li>
+            <li class="sub-item more">
+            </li>
+          </ul>
+        </li>
+        
+        <li class="menu-item"><a href="../carnaval/carnaval.html">Carnaval</a></li>
+
+        <li class="menu-item"><a href="../Contato/contato.html">Contato</a></li>
+
+      </ul>
+    </div>
+    <div class="menu-btn"></div>
+  </header>
+
+  <section class="section-home">
+    <a class="scroll-link" href="#section2">Donatello</a>
+  </section>
+  <section class="section-two">
+
+    <div id="section2" class="content"></div>
+    <script src="java/script.js"></script>
+    <h2> Donatello </h2>
+
+    <p>Donatello foi um escultor italiano do Renascimento, nascido em Florença por volta de 1386. Ele é considerado um dos principais artistas do seu tempo e um dos mestres da escultura do movimento artístico conhecido como Quattrocento.
+        <br><br>
+        Donatello iniciou sua carreira como aprendiz na oficina de Lorenzo Ghiberti, onde desenvolveu suas habilidades e logo se destacou como um talentoso escultor. Ele foi um dos primeiros artistas a redescobrir e incorporar as técnicas da escultura clássica romana em sua arte, o que lhe rendeu fama e reconhecimento.
+<br>
+Seu estilo inovador e técnicas refinadas permitiram a ele criar esculturas realistas e expressivas, com um domínio impressionante da anatomia humana. Suas obras eram conhecidas por transmitir movimento e dinamismo, revelando a habilidade de capturar a essência emocional de seus personagens. </p>
+
+    <p>Algumas de suas obras mais notáveis incluem o "David", uma estátua de bronze que representa o herói bíblico Davi e que se tornou um ícone da escultura renascentista; a estátua equestre do condottiero Gattamelata, localizada em Pádua; e a "Madonna de Santo Antônio", um relevo em mármore que demonstra sua maestria nas formas tridimensionais.<br>
+
+      Donatello influenciou profundamente a arte renascentista e deixou um legado duradouro na história da escultura e da arte ocidental. Sua abordagem inovadora e busca pela expressão emocional nas obras o tornaram uma figura fundamental no movimento artístico que marcou uma nova era de redescoberta e renovação cultural na Europa. Sua influência e legado continuam a ser admirados e estudados até os dias atuais.</p>
+
+
+      <img src="../pintores/fotos/Donatello.jpg" width="640" height="360" >
+
+  </section> 
+
+  <script type="text/javascript">
+  //jquery for toggle dropdown menus
+  $(document).ready(function(){
+    //toggle sub-menus
+    $(".sub-btn").click(function(){
+      $(this).next(".sub-menu").slideToggle();
+    });
+
+    //toggle more-menus
+    $(".more-btn").click(function(){
+      $(this).next(".more-menu").slideToggle();
+    });
+  });
+
+  //javascript for the responsive navigation menu
+  var menu = document.querySelector(".menu");
+  var menuBtn = document.querySelector(".menu-btn");
+  var closeBtn = document.querySelector(".close-btn");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+
+  //javascript for the navigation bar effects on scroll
+  window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+  });
+  </script>
+
+
+  </body>
+</html>

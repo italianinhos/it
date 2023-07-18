@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Leonardo Da Vinci </title>
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+<body>
+
+  
+
+  <header>
+    <a class="logo">Pintores</a>
+
+    <a href="https://www.instagram.com/italianos_senai/"  target="corpo"><img style="margin-left: 820px; margin-top: 4px;" src="fotos/insta.png" width="35" height="35"> </a>
+    <a href="https://www.facebook.com/profile.php?id=100094661707788" target="corpo"><img style="padding: 3px; margin-top: 4px;" src="fotos/face.png" width="35" height="35"> </a> 
+
+    <div class="navigation">
+      <ul class="menu">
+        <div class="close-btn"></div>
+        <li class="menu-item"><a href="../home/home.html">Menu</a></li>
+        <li class="menu-item">
+          <a class="sub-btn" href="../culinaria/1.html"> Culinária  <i class="fas fa-angle-down"></i></a>
+          <ul class="sub-menu">
+            <li class="sub-item"><a href="../culinaria/1.html"> Pizza</a></li>
+            <li class="sub-item"><a href="../culinaria/2.html"> Macarronada</a></li>
+            <li class="sub-item"><a href="../culinaria/3.html"> Lasanha </a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a class="sub-btn" href="../pontos/index.html">Pontos Turísticos</a>
+        
+        </li>
+        <li class="menu-item">
+          <a class="sub-btn" href="#"> Pintores <i class="fas fa-angle-down"></i> </a>
+          <ul class="sub-menu">
+            <li class="sub-item"><a href="#"> Leonardo Da Vinci</a></li>
+            <li class="sub-item"><a href="2.html">Michelangelo</a></li>
+            <li class="sub-item"><a href="3.html">Donatello</a></li>
+            <li class="sub-item more">
+            </li>
+          </ul>
+        </li>
+        
+        <li class="menu-item"><a href="../carnaval/carnaval.html">Carnaval</a></li>
+       
+        <li class="menu-item"><a href="../Contato/contato.html">Contato</a></li>
+
+      </ul>
+    </div>
+    <div class="menu-btn"></div>
+  </header>
+
+  <section class="section-home">
+    <a class="scroll-link" href="#section2">Leonardo Da Vinci</a>
+  </section>
+  <section class="section-two">
+
+     
+    <div id="section2" class="content"></div>
+    <script src="java/script.js"></script>
+    
+    <h2> Leonardo Da Vinci </h2>
+
+    <p>Leonardo da Vinci foi um dos maiores gênios renascentistas e um dos mais influentes artistas e cientistas da história. Ele nasceu em 1452, na cidade de Vinci, na Itália, e faleceu em 1519, em Amboise, na França.<br> Da Vinci foi um polímata, ou seja, uma pessoa que se destacou em diversas áreas do conhecimento, como pintura, escultura, arquitetura, anatomia, engenharia, matemática, música, entre outras.
+<br>
+    Como artista, Da Vinci é conhecido por suas obras-primas, como a "Mona Lisa" e "A Última Ceia". Sua habilidade em retratar a natureza, o realismo das expressões e a técnica de sfumato (um estilo de esfumação de cores para criar transições suaves) tornaram suas pinturas únicas e atemporais.</p>
+
+    <p>Além de suas realizações artísticas, Leonardo da Vinci também foi um inventor prolífico e um cientista curioso. Ele dedicou grande parte de sua vida ao estudo da anatomia humana, realizando dissecações e desenhando com detalhes precisos as estruturas do corpo humano. Suas anotações sobre a anatomia, muitas vezes acompanhadas por esboços, são consideradas extremamente valiosas para a compreensão do corpo humano.</p>
+
+    <p>Da Vinci também se destacou em projetos de engenharia e invenções. Ele concebeu projetos para máquinas voadoras, submarinos, pontes, tanques de guerra e muitos outros dispositivos inovadores. Embora muitas de suas ideias tenham sido além de sua época e não tenham sido construídas durante sua vida, muitas delas foram fundamentais para o desenvolvimento posterior da tecnologia.</p>
+
+    <p>A genialidade de Leonardo da Vinci estava em sua capacidade de combinar ciência e arte, explorando a interseção entre os dois campos. Ele acreditava que a observação atenta da natureza era essencial para o conhecimento e a expressão artística. Sua abordagem multidisciplinar e sua busca incessante pelo conhecimento tornaram-no uma figura icônica e um símbolo do Renascimento italiano. Seu legado influenciou gerações posteriores de artistas, cientistas e inventores, deixando uma marca indelével na história da humanidade.</p>
+  
+  <img src="../pintores/fotos/leo.jpg" width="640" height="360" >
+  
+  </section>
+
+  <script type="text/javascript">
+  //jquery for toggle dropdown menus
+  $(document).ready(function(){
+    //toggle sub-menus
+    $(".sub-btn").click(function(){
+      $(this).next(".sub-menu").slideToggle();
+    });
+
+    //toggle more-menus
+    $(".more-btn").click(function(){
+      $(this).next(".more-menu").slideToggle();
+    });
+  });
+
+  //javascript for the responsive navigation menu
+  var menu = document.querySelector(".menu");
+  var menuBtn = document.querySelector(".menu-btn");
+  var closeBtn = document.querySelector(".close-btn");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+
+  //javascript for the navigation bar effects on scroll
+  window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+  });
+  </script>
+
+
+  </body>
+</html>
